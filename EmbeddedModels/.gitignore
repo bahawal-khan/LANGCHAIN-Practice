@@ -1,0 +1,5 @@
+# venv aur env files ignore karne ke liye
+venv/
+.env
+__pycache__/
+*.pyc
