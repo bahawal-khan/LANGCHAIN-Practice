@@ -1,0 +1,121 @@
+Artificial Intelligence and Machine Learning
+
+Artificial Intelligence, commonly known as AI, is a field of computer science that focuses on creating systems capable of performing tasks that normally require human intelligence. These tasks can include understanding language, recognizing images, making decisions, solving problems, learning from experience, and interacting with users.
+
+AI has become an important part of modern technology. It is used in smartphones, search engines, recommendation systems, autonomous vehicles, healthcare applications, financial systems, education platforms, and many other areas.
+
+Machine Learning
+
+Machine Learning is a subfield of Artificial Intelligence. Instead of explicitly programming every rule, machine learning systems learn patterns from data. The model receives training data and tries to identify relationships and patterns that can help it make predictions on new data.
+
+For example, suppose we want to build a system that predicts whether an email is spam. We can provide the machine learning model with thousands of emails labeled as spam or not spam. The model analyzes these examples and learns patterns associated with spam messages. After training, the model can predict whether a new email is likely to be spam.
+
+Types of Machine Learning
+
+There are three major types of machine learning: supervised learning, unsupervised learning, and reinforcement learning.
+
+Supervised learning uses labeled data. Each training example contains an input and the correct output. Classification and regression are common supervised learning tasks. In classification, the model predicts a category. For example, an email can be classified as spam or not spam. In regression, the model predicts a numerical value, such as house price or temperature.
+
+Unsupervised learning works with data that does not have predefined labels. The algorithm tries to discover hidden patterns or structures in the data. Clustering is a common example. A clustering algorithm can group customers based on their purchasing behavior without being explicitly told which customer belongs to which group.
+
+Reinforcement learning is based on interaction with an environment. An agent performs actions and receives rewards or penalties. Over time, the agent learns which actions are more likely to produce better results. Reinforcement learning has been used in robotics, games, recommendation systems, and other decision-making problems.
+
+Deep Learning
+
+Deep Learning is a specialized area of machine learning that uses artificial neural networks with multiple layers. These networks can learn complex patterns from large amounts of data.
+
+Deep learning is especially powerful for image recognition, speech recognition, natural language processing, and computer vision. Convolutional Neural Networks are commonly used for image-related tasks, while Transformer architectures have become extremely important in natural language processing.
+
+Natural Language Processing
+
+Natural Language Processing, or NLP, focuses on enabling computers to understand and process human language. NLP applications include text classification, sentiment analysis, machine translation, question answering, summarization, and chatbots.
+
+Large Language Models
+
+Large Language Models, often called LLMs, are machine learning models trained on large amounts of text data. They can generate text, answer questions, summarize documents, translate languages, write code, and perform many other language-related tasks.
+
+Examples of applications built with LLMs include customer support assistants, coding assistants, educational chatbots, document analysis systems, and content generation tools.
+
+Generative AI
+
+Generative AI refers to AI systems that can create new content based on learned patterns. The generated content can include text, images, audio, video, and computer code.
+
+Generative AI has become popular because users can interact with AI systems using natural language. Instead of manually writing complex instructions, users can describe what they need and the model can generate a response.
+
+Retrieval-Augmented Generation
+
+Retrieval-Augmented Generation, commonly known as RAG, is a technique used to connect an LLM with external knowledge sources.
+
+A normal LLM may not know the information contained inside a company's private documents. RAG solves this problem by retrieving relevant information from external documents and providing that information to the language model as context.
+
+A typical RAG pipeline contains several steps. First, documents are loaded into the system. The documents may come from PDF files, text files, websites, databases, or other sources. Next, the documents are divided into smaller pieces called chunks. These chunks are converted into numerical representations called embeddings.
+
+The embeddings are stored in a vector database. When a user asks a question, the system converts the question into an embedding and searches for similar chunks in the vector database. The most relevant information is retrieved and passed to the language model. The LLM then uses the retrieved information to generate the final answer.
+
+Document Loaders
+
+Document loaders are responsible for loading information from different sources into an application. Different document loaders can be used for different file types.
+
+For example, TextLoader can load plain text files, PyPDFLoader can load PDF documents, CSVLoader can load CSV files, and web loaders can retrieve content from websites.
+
+TextLoader
+
+TextLoader is useful when the source information is stored in a plain text file. It reads the contents of a text file and converts the information into LangChain Document objects.
+
+For example, a company may store frequently asked questions inside a text file. TextLoader can read that file and pass the information to the next stage of the RAG pipeline.
+
+Text Splitting
+
+Large documents are usually divided into smaller chunks before generating embeddings. This process is called text splitting.
+
+Chunking is important because sending an entire large document to a language model may exceed the model's context limitations. Smaller chunks also make it easier for the retrieval system to find the specific information relevant to a user's question.
+
+Embeddings
+
+Embeddings are numerical representations of text. Similar pieces of text generally have similar vector representations.
+
+For example, the sentences "How can I reset my password?" and "I forgot my password, how do I change it?" have different words but similar meanings. An embedding model can represent these sentences as vectors that are close to each other in vector space.
+
+Vector Databases
+
+A vector database stores embeddings and allows applications to search for similar vectors efficiently. Vector databases are commonly used in RAG applications.
+
+When a user asks a question, the question is converted into an embedding. The vector database searches for document chunks with similar embeddings and returns the most relevant results.
+
+Popular vector database technologies include FAISS, Chroma, Pinecone, Weaviate, and Milvus.
+
+RAG Chatbot Example
+
+Imagine a university has thousands of pages of documentation about admissions, courses, scholarships, exams, fees, and academic policies.
+
+A university chatbot can use RAG to answer student questions.
+
+A student might ask:
+
+"What are the requirements for admission to the Computer Science program?"
+
+The system searches the university documents, retrieves the relevant admission requirements, and provides those documents to the language model. The language model then generates an answer based on the retrieved information.
+
+Benefits of RAG
+
+RAG can reduce the need to retrain an LLM whenever information changes. If a company updates its policies, the documents in the knowledge base can be updated instead of retraining the entire language model.
+
+RAG can also help an AI system answer questions using private or domain-specific information that was not part of the model's original training data.
+
+Applications of RAG
+
+RAG can be used for customer support chatbots, university assistants, medical research systems, company knowledge bases, legal document search, technical documentation assistants, financial document analysis, and internal enterprise search systems.
+
+AI Agents
+
+AI agents are systems that can reason about tasks, use tools, access information, and take actions to achieve a goal.
+
+An AI agent might receive a user request, search a database, call an API, retrieve information from documents, perform calculations, and then provide the final result.
+
+RAG and AI agents can work together. An agent can use a RAG system as one of its tools to search a company's knowledge base before answering a question.
+
+Conclusion
+
+Artificial Intelligence is a broad field that includes machine learning, deep learning, natural language processing, generative AI, and many other technologies. Modern AI applications increasingly combine language models with external tools, databases, APIs, and retrieval systems.
+
+RAG is particularly useful when an AI application needs to answer questions using specific and frequently changing information. Document loaders, text splitters, embedding models, vector databases, retrievers, and language models are important components of a typical RAG system.
